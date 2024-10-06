@@ -1,0 +1,93 @@
+@import "../../vars.css";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8%;
+  background-color: teal; /* Teal background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern feel */
+  z-index: 1000;
+}
+
+.title {
+  font-size: 24px; /* Slightly smaller font for a minimal look */
+  font-weight: 500; /* Lighter font weight */
+  text-decoration: none;
+  color: white; /* White for better contrast */
+  letter-spacing: 1px; /* Modern, spaced-out text */
+}
+
+.menuBtn {
+  display: none;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menuItems {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.menuItems a {
+  font-size: 18px; /* Modern, clean size */
+  color: black; /* Black text color for a clean, minimalist look */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.menuItems a:hover {
+  color: white; /* Subtle hover effect */
+}
+
+@media screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 5%;
+  }
+
+  .menuBtn {
+    display: block; /* Show menu button on mobile */
+    font-size: 28px; /* Modern hamburger icon size */
+  }
+
+  .menu {
+    display: none; /* Hide the menu initially */
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Display below the navbar */
+    background-color: teal;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Slight shadow for a modern look */
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .menuItems {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menuItems a {
+    color: white; /* White for visibility on mobile */
+  }
+}

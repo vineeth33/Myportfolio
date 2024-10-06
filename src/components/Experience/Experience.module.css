@@ -1,0 +1,126 @@
+.container {
+  color: var(--color-text);
+  margin: 79px 10%;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.skills {
+  width: 45%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 30px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skillImageContainer {
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skillImageContainer img {
+  width: 60%;
+}
+
+.skill p {
+  font-size: 20px;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  text-align: center;
+}
+
+.history {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.historyItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  background: linear-gradient(90deg, #038680 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 10px;
+  padding: 18px;
+  transition: transform 0.2s ease;
+}
+
+.historyItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.historyItem img {
+  width: 100px;
+}
+
+.historyItemDetails {
+  font-family: var(--font-roboto);
+}
+
+.historyItemDetails h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.historyItemDetails p {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 4px 0;
+}
+
+.historyItemDetails ul {
+  margin-top: 6px;
+  list-style-position: inside;
+  font-size: 20px;
+  list-style-type: disc;
+  margin-left: 17px;
+}
+
+@media screen and (max-width: 830px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+  }
+
+  .skills {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    justify-content: center;
+  }
+
+  .history {
+    width: 100%;
+    gap: 9px;
+  }
+}

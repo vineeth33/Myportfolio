@@ -1,0 +1,26 @@
+[
+  {
+    "title": "EatEase",
+    "imageSrc": "projects/eatease.png",
+    "description": "Led development of a food delivery system using SQL and NetBeans. Improved order management and streamlined the food delivery process.",
+    "skills": ["SQL", "NetBeans", "Java"],
+    "demo": "https://www.example.com/eatease-demo",
+    "source": "https://github.com/vineeth33/EatEase"
+  },
+  {
+    "title": "Blocky Blitz",
+    "imageSrc": "projects/blockyblitz.png",
+    "description": "Developed an interactive game using JavaFX with modular, reusable code and multiple levels, boosting user engagement.",
+    "skills": ["JavaFX", "Java", "OOP"],
+    "demo": "https://www.example.com/blockyblitz-demo",
+    "source": "https://github.com/vineeth33/BlockyBlitz"
+  },
+  {
+    "title": "Weatherly",
+    "imageSrc": "projects/weatherly.png",
+    "description": "Created an Android app using Flutter to provide real-time weather updates. Integrated OpenWeather API and optimized app performance.",
+    "skills": ["Flutter", "Firebase", "OpenWeather API"],
+    "demo": "https://www.example.com/weatherly-demo",
+    "source": "https://www.github.com/weatherly-repo"
+  }
+]

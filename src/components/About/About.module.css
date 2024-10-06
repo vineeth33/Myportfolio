@@ -1,0 +1,137 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  background-color: #0f0f0f;
+  border-radius: 15px;
+  padding: 60px;
+  margin-top: 120px;
+  margin-left: 10%;
+  margin-right: 10%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.aboutImage {
+  width: 30%;
+  animation: zoomIn 1s ease-in-out;
+}
+
+.aboutItems {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.aboutItem {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  padding: 20px 30px;
+  background-image: linear-gradient(90deg, rgba(14, 130, 126, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, transform 0.3s ease;
+  animation: slideUp 1s ease-in-out;
+}
+
+.aboutItem:hover {
+  background-size: 100% 100%;
+  transform: translateY(-5px);
+}
+
+.aboutItem h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.aboutItem p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    background-color: transparent;
+    padding: 0;
+    margin: 50px 0;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .aboutImage {
+    display: none;
+  }
+
+  .aboutItems {
+    gap: 30px;
+  }
+
+  .aboutItem {
+    padding: 15px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

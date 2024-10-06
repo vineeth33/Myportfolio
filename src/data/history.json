@@ -1,0 +1,32 @@
+[
+  {
+    "role": "Lead Developer",
+    "organisation": "ShoreSecure",
+    "startDate": "August 2024",
+    "endDate": "Present",
+    "experiences": [
+      "Designing and implementing a coastal tourism app using Flutter and Firebase.",
+      "Integrated real-time weather and ocean data for user alerts."],
+    "imageSrc": "history/shoresecure.png"
+  },
+  {
+    "role": "Project Lead",
+    "organisation": "EatEase",
+    "startDate": "June 2024",
+    "endDate": "July 2024",
+    "experiences": [
+      "Led development of a food delivery system using SQL and NetBeans.",
+      "Managed a team of 2 developers to streamline the food ordering process."],
+    "imageSrc": "history/eatease.png"
+  },
+  {
+    "role": "Game Developer",
+    "organisation": "Blocky Blitz",
+    "startDate": "December 2023",
+    "endDate": "January 2024",
+    "experiences": [
+      "Developed an interactive game using JavaFX with visually appealing graphics.",
+      "Incorporated OOP principles to ensure modular, reusable code."],
+    "imageSrc": "history/blockyblitz.png"
+  }
+]
