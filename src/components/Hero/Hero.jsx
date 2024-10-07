@@ -13,24 +13,25 @@ export const Hero = () => {
         </p>
 
         <div className={styles.socialIcons}>
-          <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/Vineeth0101" target="_blank" rel="noopener noreferrer">
             <FaTwitter className={styles.icon} />
           </a>
-          <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://instagram.com/_vineethsai_" target="_blank" rel="noopener noreferrer">
             <FaInstagram className={styles.icon} />
           </a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/vineeth-ummadisetty-4933511a6/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className={styles.icon} />
           </a>
-          <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/vineeth33" target="_blank" rel="noopener noreferrer">
             <FaGithub className={styles.icon} />
           </a>
         </div>
 
         <div className={styles.buttons}>
           <a href="mailto:vinnu593358@gmail.com" className={styles.contactBtn}>Contact Me</a>
-          <a href="/Users/vineethu/Desktop/Placements/vineeth-resume.pdf" download className={styles.downloadCVBtn}>Download CV</a>
-        </div>
+          <a href="/vineeth-resume.pdf" download className={styles.downloadCVBtn}>Download CV</a>
+       </div>
+
       </div>
       
       <img src={getImageUrl("hero/picc.png")} alt="Hero image" className={styles.heroImg} />

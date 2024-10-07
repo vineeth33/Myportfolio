@@ -21,6 +21,6 @@
     "description": "Created an Android app using Flutter to provide real-time weather updates. Integrated OpenWeather API and optimized app performance.",
     "skills": ["Flutter", "Firebase", "OpenWeather API"],
     "demo": "https://www.example.com/weatherly-demo",
-    "source": "https://www.github.com/weatherly-repo"
+    "source": "https://github.com/vineeth33/Weatherly"
   }
 ]
