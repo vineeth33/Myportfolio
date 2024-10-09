@@ -1,126 +1,197 @@
 .container {
-  color: var(--color-text);
-  margin: 79px 10%;
+  background-color: rgba(15, 15, 15, 0.8);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.title {
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
-  margin-bottom: 14px;
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(32, 201, 151, 0.1) 0%, rgba(32, 201, 151, 0) 100%);
+  z-index: 0;
 }
 
 .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #20c997;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 50px;
+  height: 3px;
+  background-color: #20c997;
+  transform: translateX(-50%);
+}
+
+.sections {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-top: 14px;
+  gap: 40px;
+}
+
+.skillsSection,
+.historySection {
+  flex: 1;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .skills {
-  width: 45%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px;
 }
 
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  text-align: center;
 }
 
 .skillImageContainer {
-  background-color: var(--color-secondary);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  width: 80px;
+  height: 80px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.skillImageContainer:hover {
+  background-color: rgba(32, 201, 151, 0.2);
+  transform: translateY(-5px);
 }
 
 .skillImageContainer img {
   width: 60%;
+  height: auto;
 }
 
 .skill p {
-  font-size: 20px;
-  font-family: var(--font-roboto);
-  font-weight: 500;
-  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
 }
 
 .history {
-  width: 45%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
 .historyItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 15px;
-  background: linear-gradient(90deg, #038680 0%, rgba(0, 0, 0, 0) 100%);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
-  padding: 18px;
-  transition: transform 0.2s ease;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.3s ease;
 }
 
 .historyItem:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(32, 201, 151, 0.1);
+  transform: translateY(-5px);
 }
 
-.historyItem img {
-  width: 100px;
+.historyItemImage {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 20px;
+  border-radius: 5px;
 }
 
-.historyItemDetails {
-  font-family: var(--font-roboto);
+.historyItemDetails h4 {
+  font-size: 1.2rem;
+  color: #20c997;
+  margin: 0 0 5px 0;
 }
 
-.historyItemDetails h3 {
-  font-size: 24px;
-  font-weight: 500;
-  margin: 0;
+.organisation {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0 0 5px 0;
 }
 
-.historyItemDetails p {
-  font-size: 18px;
-  font-weight: 300;
-  margin: 4px 0;
+.date {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin: 0 0 10px 0;
 }
 
-.historyItemDetails ul {
-  margin-top: 6px;
-  list-style-position: inside;
-  font-size: 20px;
+.experiences {
   list-style-type: disc;
-  margin-left: 17px;
+  padding-left: 20px;
+  color: #ffffff;
+}
+
+.experiences li {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 830px) {
-  .content {
+  .sections {
     flex-direction: column;
-    align-items: center;
-    gap: 34px;
   }
 
   .skills {
-    width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   }
 
-  .history {
-    width: 100%;
-    gap: 9px;
+  .historyItem {
+    flex-direction: column;
+  }
+
+  .historyItemImage {
+    margin-right: 0;
+    margin-bottom: 15px;
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skillsSection,
+.historySection {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.skillsSection { animation-delay: 0.2s; }
+.historySection { animation-delay: 0.4s; }

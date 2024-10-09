@@ -1,137 +1,132 @@
-@import "../../vars.css";
-
 .container {
+  background-color: rgba(15, 15, 15, 0.8);
+  padding: 100px 0;
   position: relative;
-  background-color: #0f0f0f;
-  border-radius: 15px;
-  padding: 60px;
-  margin-top: 120px;
-  margin-left: 10%;
-  margin-right: 10%;
-  animation: fadeIn 1s ease-in-out;
+  overflow: hidden;
 }
 
-.title {
-  color: var(--color-text);
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  animation: slideInLeft 1s ease-in-out;
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(32, 201, 151, 0.1) 0%, rgba(32, 201, 151, 0) 100%);
+  z-index: 0;
 }
 
 .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.aboutInfo {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #20c997;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 50px;
+  height: 3px;
+  background-color: #20c997;
+  transform: translateX(-50%);
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.skills {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.aboutImage {
-  width: 30%;
-  animation: zoomIn 1s ease-in-out;
-}
-
-.aboutItems {
-  color: var(--color-text);
+.skillItem {
+  flex-basis: calc(33.333% - 20px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 30px;
+  transition: all 0.3s ease;
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-  animation: fadeIn 1s ease-in-out;
+  align-items: flex-start;
 }
 
-.aboutItem {
-  display: flex;
-  align-items: center;
-  border-radius: 15px;
-  padding: 20px 30px;
-  background-image: linear-gradient(90deg, rgba(14, 130, 126, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.4s ease, transform 0.3s ease;
-  animation: slideUp 1s ease-in-out;
+.skillItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(32, 201, 151, 0.1);
 }
 
-.aboutItem:hover {
-  background-size: 100% 100%;
-  transform: translateY(-5px);
+.skillIcon {
+  font-size: 2.5rem;
+  color: #20c997;
+  margin-right: 20px;
 }
 
-.aboutItem h3 {
-  font-size: 22px;
-  font-weight: 600;
+.skillText h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
-.aboutItem p {
-  font-size: 18px;
-  font-weight: 400;
+.skillText p {
+  font-size: 1rem;
+  color: #cccccc;
   line-height: 1.5;
 }
 
 @media screen and (max-width: 830px) {
   .container {
-    background-color: transparent;
-    padding: 0;
-    margin: 50px 0;
+    padding: 60px 0;
   }
 
-  .content {
+  .skills {
     flex-direction: column;
   }
 
-  .aboutImage {
-    display: none;
-  }
-
-  .aboutItems {
-    gap: 30px;
-  }
-
-  .aboutItem {
-    padding: 15px;
+  .skillItem {
+    flex-basis: 100%;
   }
 }
 
-/* Animations */
-@keyframes fadeIn {
-  0% {
+@keyframes fadeInUp {
+  from {
     opacity: 0;
+    transform: translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
     transform: translateY(0);
-    opacity: 1;
   }
 }
+
+.aboutInfo, .skillItem {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.skillItem:nth-child(1) { animation-delay: 0.2s; }
+.skillItem:nth-child(2) { animation-delay: 0.4s; }
+.skillItem:nth-child(3) { animation-delay: 0.6s; }

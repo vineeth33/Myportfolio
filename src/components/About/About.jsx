@@ -1,47 +1,48 @@
 import React from "react";
-
-import { getImageUrl } from "../../utils";
+import { FaCode, FaMobileAlt, FaServer } from 'react-icons/fa';
 import styles from "./About.module.css";
 
 export const About = () => {
   return (
     <section className={styles.container} id="about">
-      <h2 className={styles.title}>About</h2>
       <div className={styles.content}>
-        <img
-          src={getImageUrl("about/about.png")}
-          alt="Me sitting with a laptop"
-          className={styles.aboutImage}
-        />
-        <ul className={styles.aboutItems}>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
-            <div className={styles.aboutItemText}>
+        <div className={styles.aboutInfo}>
+          <h2 className={styles.title}>About Me</h2>
+          <p className={styles.description}>
+            I'm a passionate Computer Science student with a keen interest in software development, 
+            problem-solving, and exploring cutting-edge technologies. My journey in tech has equipped 
+            me with a diverse skill set, allowing me to tackle complex challenges and create innovative solutions.
+          </p>
+        </div>
+        <div className={styles.skills}>
+          <div className={styles.skillItem}>
+            <div className={styles.skillIcon}>
+              <FaServer />
+            </div>
+            <div className={styles.skillText}>
               <h3>Backend Developer</h3>
-              <p>
-              Experienced in building secure and efficient server-side applications with databases.
-              </p>
+              <p>Experienced in building secure and efficient server-side applications with databases.</p>
             </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
-            <div className={styles.aboutItemText}>
+          </div>
+          <div className={styles.skillItem}>
+            <div className={styles.skillIcon}>
+              <FaMobileAlt />
+            </div>
+            <div className={styles.skillText}>
               <h3>Mobile App Developer</h3>
-              <p>
-              Expertise in creating intuitive, data-driven mobile apps with Flutter.
-              </p>
+              <p>Expertise in creating intuitive, data-driven mobile apps with Flutter.</p>
             </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon" />
-            <div className={styles.aboutItemText}>
+          </div>
+          <div className={styles.skillItem}>
+            <div className={styles.skillIcon}>
+              <FaCode />
+            </div>
+            <div className={styles.skillText}>
               <h3>Software Engineer</h3>
-              <p>
-              Proficient in software design, development, and optimization across multiple languages.
-              </p>
+              <p>Proficient in software design, development, and optimization across multiple languages.</p>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

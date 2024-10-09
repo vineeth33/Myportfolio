@@ -3,11 +3,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #0f0f0f;
+  min-height: 100vh;
   padding: 40px 10%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.714);
-  animation: fadeIn 1s ease-in-out;
+  overflow: hidden;
+}
+
+.backgroundCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .content {
@@ -46,12 +53,12 @@
 .icon {
   color: #20c997;
   font-size: 30px;
-  transition: color 0.3s ease;
-  animation: bounce 1.5s infinite;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .icon:hover {
   color: #17a589;
+  transform: scale(1.1) rotate(5deg);
 }
 
 .buttons {
@@ -66,8 +73,24 @@
   border-radius: 50px;
   font-size: 18px;
   padding: 15px 30px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
+}
+
+.contactBtn::before, .downloadCVBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.5s;
+}
+
+.contactBtn:hover::before, .downloadCVBtn:hover::before {
+  left: 100%;
 }
 
 .contactBtn {
@@ -82,22 +105,24 @@
 }
 
 .downloadCVBtn {
-  background-color: #1abc9c;
-  color: #0f0f0f;
+  background-color: transparent;
+  color: #20c997;
+  border: 2px solid #20c997;
 }
 
 .downloadCVBtn:hover {
-  background-color: #16a085;
+  background-color: #20c997;
   color: #ffffff;
   transform: scale(1.05);
 }
 
 .heroImg {
-  width: 50%;
+  width: 40%;
   border-radius: 20px;
   transform: scale(0.9);
   margin-left: 80px;
   animation: imageFloat 3s ease-in-out infinite alternate;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 830px) {
@@ -124,15 +149,6 @@
 }
 
 /* Animations */
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 @keyframes slideInLeft {
   0% {
@@ -178,21 +194,15 @@
   }
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
 @keyframes gradientText {
   0% {
     background-position: 0% 50%;
   }
-  100% {
+  50% {
     background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

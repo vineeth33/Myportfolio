@@ -1,29 +1,41 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from "./Navbar.module.css";
-import { getImageUrl } from "../../utils";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    document.addEventListener('scroll', handleScroll);
+
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <a className={styles.title} href="/">
-        Portfolio
+        Vineeth
       </a>
       <div className={styles.menu}>
-        <img
+        <button
           className={styles.menuBtn}
-          src={
-            menuOpen
-              ? getImageUrl("nav/closeIcon.png")
-              : getImageUrl("nav/menuIcon.png")
-          }
-          alt="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
-        />
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
         <ul
-          className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
+          className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ''}`}
           onClick={() => setMenuOpen(false)}
         >
           <li>
