@@ -5,11 +5,6 @@ import styles from "./Contact.module.css";
 export const Contact = () => {
   return (
     <footer id="contact" className={styles.container}>
-      <video autoPlay loop muted className={styles.backgroundVideo}>
-        <source src="/videos/background-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
       <div className={styles.content}>
         <div className={styles.text}>
           <h2>Contact</h2>
