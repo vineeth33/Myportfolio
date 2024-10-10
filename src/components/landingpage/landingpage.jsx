@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import styles from './LandingPage.module.css';
+import styles from './landingpage.module.css';
 
 export const LandingPage = () => {
   const canvasRef = useRef(null);
