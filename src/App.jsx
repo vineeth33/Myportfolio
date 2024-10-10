@@ -7,6 +7,8 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Projects } from "./components/Projects/Projects";
 import { LandingPage } from "./components/landingpage/landingpage";
 
+
+
 function App() {
   return (
     <div className={styles.App}>
