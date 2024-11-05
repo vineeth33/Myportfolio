@@ -46,7 +46,10 @@ To run this project locally, follow these steps:
 
 ## 🖼 Screenshots
 
-[You can add screenshots of your portfolio here]
+![image](https://github.com/user-attachments/assets/6a5f9fa8-0b62-4767-98e3-4557dcffa513)
+![image](https://github.com/user-attachments/assets/3875ff64-151e-430e-9f48-26bd9d8eb142)
+
+
 
 ## 🤝 Contributing
 
