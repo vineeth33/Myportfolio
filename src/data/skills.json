@@ -26,5 +26,33 @@
   {
     "title": "Firebase",
     "imageSrc": "skills/firebase.png"
+  },
+  {
+    "title": "Java",
+    "imageSrc": "skills/java.png"
+  },
+  {
+    "title": "python3",
+    "imageSrc": "skills/python.png"
+  },
+  {
+    "title": "C",
+    "imageSrc": "skills/c.png"
+  },
+  {
+    "title": "Numpy",
+    "imageSrc": "skills/numpy.png"
+  },
+  {
+    "title": "Mysql",
+    "imageSrc": "skills/sql.png"
+  },
+  {
+    "title": "premiere pro",
+    "imageSrc": "skills/premiere.png"
+  },
+  {
+    "title": "javascript",
+    "imageSrc": "skills/javascript.png"
   }
 ]
