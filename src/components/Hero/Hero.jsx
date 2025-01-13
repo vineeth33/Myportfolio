@@ -65,7 +65,7 @@ export const Hero = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>Hey, I'm Vineeth</h1>
         <p className={styles.description}>
-          Passionate 3rd-year Computer Science student skilled in software development, problem-solving, and exploring cutting-edge technologies.
+          Passionate Computer Science student skilled in software development, problem-solving, and exploring cutting-edge technologies.
         </p>
 
         <div className={styles.socialIcons}>
