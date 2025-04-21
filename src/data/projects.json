@@ -3,7 +3,11 @@
     "title": "EatEase",
     "imageSrc": "projects/eatease.png",
     "description": "Led development of a food delivery system using SQL and NetBeans. Improved order management and streamlined the food delivery process.",
-    "skills": ["SQL", "NetBeans", "Java"],
+    "skills": [
+      "SQL",
+      "NetBeans",
+      "Java"
+    ],
     "demo": "https://www.example.com/eatease-demo",
     "source": "https://github.com/vineeth33/EatEase"
   },
@@ -11,7 +15,11 @@
     "title": "Blocky Blitz",
     "imageSrc": "projects/blockyblitz.png",
     "description": "Developed an interactive game using JavaFX with modular, reusable code and multiple levels, boosting user engagement.",
-    "skills": ["JavaFX", "Java", "OOP"],
+    "skills": [
+      "JavaFX",
+      "Java",
+      "OOP"
+    ],
     "demo": "https://www.example.com/blockyblitz-demo",
     "source": "https://github.com/vineeth33/BlockyBlitz"
   },
@@ -19,8 +27,72 @@
     "title": "Weatherly",
     "imageSrc": "projects/weatherly.png",
     "description": "Created an Android app using Flutter to provide real-time weather updates. Integrated OpenWeather API and optimized app performance.",
-    "skills": ["Flutter", "Firebase", "OpenWeather API"],
+    "skills": [
+      "Flutter",
+      "Firebase",
+      "OpenWeather API"
+    ],
     "demo": "https://www.example.com/weatherly-demo",
     "source": "https://github.com/vineeth33/Weatherly"
+  },
+  {
+    "title": "CAMS",
+    "imageSrc": "projects/cams.png",
+    "description": "A campus access management system developed for secure student check-ins and monitoring using RFID integration.",
+    "skills": [
+      "JavaScript",
+      "Node.js",
+      "React"
+    ],
+    "demo": "https://www.example.com/cams-demo",
+    "source": "https://github.com/vineeth33/CAMS"
+  },
+  {
+    "title": "Dishcovery",
+    "imageSrc": "projects/dishcovery.png",
+    "description": "A recipe discovery platform that recommends dishes based on available ingredients using a recommendation algorithm.",
+    "skills": [
+      "Python",
+      "Flask",
+      "Machine Learning"
+    ],
+    "demo": "https://dishcovery-4npx.vercel.app/",
+    "source": "https://github.com/vineeth33/Dishcovery"
+  },
+  {
+    "title": "Dhanasakhi",
+    "imageSrc": "projects/DhanaSakhi.jpg",
+    "description": "An expense management app designed to track spending, visualize expenses, and set budgeting goals for Rural Women in India.",
+    "skills": [
+      "React Native",
+      "SQLite",
+      "Vercel"
+    ],
+    "demo": "https://dhana-sakhi.vercel.app/",
+    "source": "https://github.com/vineeth33/Dhanasakhi"
+  },
+  {
+    "title": "Dots and Connect",
+    "imageSrc": "projects/dotsconnect.png",
+    "description": "A digital version of the classic dots and boxes game with multiplayer support and real-time scoring.",
+    "skills": [
+      "Java",
+      "JavaFX",
+      "OOP"
+    ],
+    "demo": "https://www.example.com/dotsconnect-demo",
+    "source": "https://github.com/vineeth33/Dots-and-Connect"
+  },
+  {
+    "title": "Timeless Aura",
+    "imageSrc": "projects/timeless-aura.png",
+    "description": "Luxury Watch Collection Website with modern design.",
+    "skills": [
+      "React Native",
+      "Redux",
+      "Node.js"
+    ],
+    "demo": "https://timeless-aura.vercel.app/",
+    "source": "https://github.com/vineeth33/Timeless-Aura"
   }
 ]
