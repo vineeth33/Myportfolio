@@ -49,7 +49,7 @@
   },
   {
     "title": "Dishcovery",
-    "imageSrc": "projects/dishcovery.png",
+    "imageSrc": "projects/Dishcovery.png",
     "description": "A recipe discovery platform that recommends dishes based on available ingredients using a recommendation algorithm.",
     "skills": [
       "Python",
