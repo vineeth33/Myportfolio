@@ -5,7 +5,7 @@
 }
 
 .container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@
 }
 
 .title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -43,16 +43,104 @@
   transform: translateX(-50%);
 }
 
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
+/* Carousel Styles */
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselItem {
+  flex-shrink: 0;
+  padding: 0 15px;
+}
+
+.navButton {
+  background-color: rgba(32, 201, 151, 0.2);
+  color: #20c997;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navButton:hover {
+  background-color: rgba(32, 201, 151, 0.4);
+  transform: scale(1.1);
+}
+
+.prevButton {
+  left: -20px;
+}
+
+.nextButton {
+  right: -20px;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(32, 201, 151, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeIndicator {
+  background-color: #20c997;
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
-  .projectsGrid {
-    grid-template-columns: 1fr;
+  .carouselItem {
+    width: 100% !important;
+  }
+
+  .carouselTrack {
+    width: 100% !important;
+  }
+
+  .navButton {
+    width: 35px;
+    height: 35px;
+  }
+
+  .prevButton {
+    left: -10px;
+  }
+
+  .nextButton {
+    right: -10px;
   }
 }
 
@@ -61,20 +149,38 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.projectsGrid > * {
+.carouselItem {
   animation: fadeInUp 0.6s ease-out forwards;
   opacity: 0;
 }
 
-.projectsGrid > *:nth-child(1) { animation-delay: 0.1s; }
-.projectsGrid > *:nth-child(2) { animation-delay: 0.2s; }
-.projectsGrid > *:nth-child(3) { animation-delay: 0.3s; }
-.projectsGrid > *:nth-child(4) { animation-delay: 0.4s; }
-.projectsGrid > *:nth-child(5) { animation-delay: 0.5s; }
-.projectsGrid > *:nth-child(6) { animation-delay: 0.6s; }
+.carouselItem:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.carouselItem:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.carouselItem:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.carouselItem:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.carouselItem:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.carouselItem:nth-child(6) {
+  animation-delay: 0.6s;
+}
