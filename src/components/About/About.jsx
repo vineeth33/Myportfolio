@@ -20,8 +20,8 @@ export const About = () => {
               <FaServer />
             </div>
             <div className={styles.skillText}>
-              <h3>Backend Developer</h3>
-              <p>Experienced in building secure and efficient server-side applications with databases.</p>
+              <h3>Full Stack Developer</h3>
+              <p>Experienced in building secure and efficient full-stack applications with integrated frontend and backend systems, including database management.</p>
             </div>
           </div>
           <div className={styles.skillItem}>
