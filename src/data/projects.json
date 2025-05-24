@@ -38,7 +38,7 @@
   {
     "title": "CAMS",
     "imageSrc": "projects/Cams.jpeg",
-    "description": "A campus access management system developed for secure student check-ins and monitoring using RFID integration.",
+    "description": "CAMS (formerly ConsultEase) is a user-friendly web platform that helps academic institutions manage and track faculty consultancy projects with industry partners.",
     "skills": [
       "JavaScript",
       "Node.js",
