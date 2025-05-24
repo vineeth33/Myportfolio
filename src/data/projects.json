@@ -37,7 +37,7 @@
   },
   {
     "title": "CAMS",
-    "imageSrc": "projects/cams.png",
+    "imageSrc": "projects/cams.jpeg",
     "description": "A campus access management system developed for secure student check-ins and monitoring using RFID integration.",
     "skills": [
       "JavaScript",
