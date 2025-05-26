@@ -168,11 +168,7 @@ export const About = () => {
             <div className={`${styles.skillIcon} skill-icon`}>
               <FaServer />
             </div>
-<<<<<<< HEAD
             <div className={`${styles.skillText} skill-text`}>
-=======
-            <div className={styles.skillText}>
->>>>>>> 30d994bd2b56b2c036f38e70b86013a3e25dfdc1
               <h3>Full Stack Developer</h3>
               <p>Experienced in building secure and efficient full-stack applications with integrated frontend and backend systems, including database management.</p>
             </div>
