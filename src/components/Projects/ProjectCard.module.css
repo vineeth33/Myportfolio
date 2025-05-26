@@ -8,6 +8,7 @@
   box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
   padding: 18px 24px;
   max-width: 345px;
+  min-height: 600px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

@@ -1,26 +1,7 @@
 .container {
   background-color: rgba(15, 15, 15, 0.8);
-  padding: 80px 0;
-  position: relative;
-}
-
-.container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(32, 201, 151, 0.1) 0%, rgba(32, 201, 151, 0) 100%);
-  z-index: 0;
-}
-
-.content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-  z-index: 1;
+  padding: 80px 20px;
+  overflow: hidden;
 }
 
 .title {
@@ -28,159 +9,42 @@
   font-weight: 700;
   color: #20c997;
   text-align: center;
-  margin-bottom: 40px;
-  position: relative;
+  margin-bottom: 20px;
 }
 
-.title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  width: 60px;
-  height: 3px;
-  background-color: #20c997;
-  transform: translateX(-50%);
-}
-
-/* Carousel Styles */
-.carouselContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.carousel {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  border-radius: 8px;
-}
-
-.carouselTrack {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carouselItem {
-  flex-shrink: 0;
-  padding: 0 15px;
-}
-
-.navButton {
-  background-color: rgba(32, 201, 151, 0.2);
-  color: #20c997;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 2;
-  transition: all 0.3s ease;
-  position: absolute;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.navButton:hover {
-  background-color: rgba(32, 201, 151, 0.4);
-  transform: scale(1.1);
-}
-
-.prevButton {
-  left: -20px;
-}
-
-.nextButton {
-  right: -20px;
-}
-
-.indicators {
+.controls {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.indicator {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgba(32, 201, 151, 0.3);
+.controls button {
+  padding: 10px 20px;
+  background: #1abc9c;
   border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s;
 }
 
-.activeIndicator {
-  background-color: #20c997;
-  transform: scale(1.2);
+.controls button:hover {
+  background: #16a085;
 }
 
-@media (max-width: 768px) {
-  .carouselItem {
-    width: 100% !important;
-  }
-
-  .carouselTrack {
-    width: 100% !important;
-  }
-
-  .navButton {
-    width: 35px;
-    height: 35px;
-  }
-
-  .prevButton {
-    left: -10px;
-  }
-
-  .nextButton {
-    right: -10px;
-  }
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding-bottom: 20px;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.carouselItem {
-  animation: fadeInUp 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-.carouselItem:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.carouselItem:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.carouselItem:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.carouselItem:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.carouselItem:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.carouselItem:nth-child(6) {
-  animation-delay: 0.6s;
+.cardWrapper {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: 345px;
 }

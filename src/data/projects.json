@@ -64,7 +64,7 @@
     "imageSrc": "projects/DhanaSakhi.jpg",
     "description": "An expense management app designed to track spending, visualize expenses, and set budgeting goals for Rural Women in India.",
     "skills": [
-      "React Native",
+      "React",
       "SQLite",
       "Vercel"
     ],
@@ -76,9 +76,9 @@
     "imageSrc": "projects/dotsconnect.png",
     "description": "A digital version of the classic dots and boxes game with multiplayer support and real-time scoring.",
     "skills": [
-      "Java",
-      "JavaFX",
-      "OOP"
+      "Flask",
+      "Python",
+      "AI algorithm"
     ],
     "demo": "https://www.example.com/dotsconnect-demo",
     "source": "https://github.com/vineeth33/Dots-and-Connect"
@@ -88,8 +88,8 @@
     "imageSrc": "projects/timeless-aura.png",
     "description": "Luxury Watch Collection Website with modern design.",
     "skills": [
-      "React Native",
-      "Redux",
+      "React",
+      "CSS",
       "Node.js"
     ],
     "demo": "https://timeless-aura.vercel.app/",
