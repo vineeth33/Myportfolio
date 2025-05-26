@@ -12,7 +12,6 @@ import { LandingPage } from "./components/landingpage/landingpage";
 function App() {
   return (
     <div className={styles.App}>
-      <LandingPage/>
       <Navbar />
       <Hero />
       <About />
